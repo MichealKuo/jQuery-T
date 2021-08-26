@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <input id="myInput1" type="text">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+
+    <script>
+        $('.box').click(function(){
+            console.log('say hi');
+            console.log('this',$(this));
+            console.log('this',$(this).text(),'say hi');
+            //使用代名詞  THIS  來 當作來被點擊的那個人
+            $(this).css('background','red');
+
+            console.log('input value', )
+        })
+
+
+
+
+    </script>
+</body>
+</html>
+
