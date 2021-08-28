@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        height:300vh;
+    }
+    /* position之後要下width才回來 因為他浮起來 */
+    .wrap{
+        
+        width: 100%;
+        height: 50px;
+        background-color: #ccc;
+        position: fixed;
+        top:0;
+    }
+
+    .box{
+        background-color:pink;
+        height: 50px;
+        width: 30%;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(window).scroll(function(){
+            //1.使用者滾到哪裡？數字是多少？
+
+            //2.網頁內容全部長度多少？
+            console.log('body height',$('body').height())
+
+            //3.計算出目前閱讀的百分比(誰的分母？誰是分子？)
+
+            //4.最後把這百分比 給.box 的CSS的寬度
+        })
+    </script>
+</body>
+</html>
