@@ -31,6 +31,7 @@
                     $('ul').append(`<li>item 3 </li>`)
                 })
                 //找父層 然後在選取使用的條件click 選取到要變更的子層 li
+                //$('ul')最好使用id 綁定
                 $('ul').on('click','li', function(){
                     console.log('hi li', $(this).text());
                 })
