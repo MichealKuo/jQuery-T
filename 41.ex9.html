@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      .s-size {
+        font-size: 0.8rem;
+      }
+      .m-size {
+        font-size: 1rem;
+      }
+      .l-size {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="btn-group">
+          <!--btn-group 所有按鈕連起來  -->
+          <button class="btn btn-info btn-s">S</button>
+          <button class="btn btn-info btn-m active">M</button>
+          <button class="btn btn-info btn-l">L</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2>jQuery</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          mollitia iste, similique recusandae molestiae voluptatum dignissimos
+          in suscipit? Veritatis autem neque non dolor. Nostrum deserunt, porro
+          illo maxime quas explicabo?
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          mollitia iste, similique recusandae molestiae voluptatum dignissimos
+          in suscipit? Veritatis autem neque non dolor. Nostrum deserunt, porro
+          illo maxime quas explicabo?
+        </p>
+      </div>
+    </div>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+      $(".btn-s").on("click", function () {
+        $("p").removeClass().addClass("s-size");
+        $(this).addClass('active').siblings().removeClass('active')
+      });
+      $(".btn-m").on("click", function () {
+        $("p").removeClass().addClass("m-size");
+        $(this).addClass('active').siblings().removeClass('active')
+      });
+      $(".btn-l").on("click", function () {
+        $("p").removeClass().addClass("l-size");
+        $(this).addClass('active').siblings().removeClass('active')
+      });
+      //toggle 無法確認目前狀態 建議是先remove 之後在add
+    </script>
+  </body>
+</html>

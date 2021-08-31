@@ -49,10 +49,12 @@
         // 方法一
         $('input[type="checkbox"]').click(function () {
             console.log('hi', $(this).attr('checked'));
+            //attr屬性   prop偏向 狀態
             console.log('hi', $(this).prop('checked'));
 
             if ($(this).prop('checked')) {
-                $(this).parent().parent().css('background', 'lightblue');
+                $(this).parent().parent().css('background', 'lightblue'); 
+                //$(this).closest('tr').css('background', 'lightblue'); 
             }
             else {
                 $(this).parent().parent().css('background', 'transparent');

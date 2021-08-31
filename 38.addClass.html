@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #afa;
+            transition: 1s;
+        }
+        .w200 {
+            width: 200px;
+        }
+        .w300 {
+            width: 500px;
+        }
+        .bg-pink{
+            background-color: pink;
+        }
+        .bg-lightblue{
+            background-color: lightblue;
+        }
+        /* 後蓋前 */
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button id="add" >ADD</button>
+    <button id="remove" >Remove</button>
+    <div class="box"></div>
+    
+
+    <!-- addClass 加到box後面 -->
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+
+    <script>
+
+        // $('.box').on('click',function(){
+        //     $(this).addClass('w200');  
+        //     //addClass('w200 w300') 可一直加
+        // });
+
+        $('#add').on('click',function(){
+            console.log('input value:',$('input').val());
+            //宣告一個變數 方便以後資料龐大時清楚辨析
+            const inputVal = $('input').val();
+            $('.box').addClass('inputVal');
+        })
+        $('#remove').on('click',function(){
+            const inputVal = $('input').val();
+            $('.box').removeClass('inputVal');
+        })
+    </script>
+
+
+</body>
+</html>
