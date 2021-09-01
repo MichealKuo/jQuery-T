@@ -54,20 +54,44 @@
     </div>
     <script src="./js/jquery-3.6.0.js"></script>
     <script>
-      $(".btn-s").on("click", function () {
-        $("p").removeClass().addClass("s-size");
-        $(this).addClass('active').siblings().removeClass('active')
-      });
-      $(".btn-m").on("click", function () {
-        $("p").removeClass().addClass("m-size");
-        $(this).addClass('active').siblings().removeClass('active')
-      });
-      $(".btn-l").on("click", function () {
-        $("p").removeClass().addClass("l-size");
-        $(this).addClass('active').siblings().removeClass('active')
-      });
-      //toggle 無法確認目前狀態 建議是先remove 之後在add
-      $(this).addClass('active').siblings().removeClass('av')
+      // $('.btn-s').on('click', function () {
+        //     console.log('btn-s');
+        //     $('p').removeClass().addClass('fontS');
+        //     $(this).addClass('active').siblings().removeClass('active');
+        // });
+        // $('.btn-m').on('click', function () {
+        //     console.log('btn-m');
+        //     $('p').removeClass().addClass('fontM');
+        //     $(this).addClass('active').siblings().removeClass('active');
+        // });
+        // $('.btn-l').on('click', function () {
+        //     console.log('btn-l');
+        //     $('p').removeClass().addClass('fontL');
+        //     $(this).addClass('active').siblings().removeClass('active');
+        // });
+
+        $('.btn').on('click', function () {
+            // console.log('hi S', $(this).is(':contains("S")'));
+            // console.log('hi M', $(this).is(':contains("M")'));
+            // console.log('hi L', $(this).is(':contains("L")'));
+
+            if ($(this).is(':contains("S")')) {
+                $('p').removeClass().addClass('fontS');
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+
+            if ($(this).is(':contains("M")')) {
+                $('p').removeClass().addClass('fontM');
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+
+            if ($(this).is(':contains("L")')) {
+                $('p').removeClass().addClass('fontL');
+                $(this).addClass('active').siblings().removeClass('active');
+            }
+
+        });
+
     </script>
   </body>
 </html>

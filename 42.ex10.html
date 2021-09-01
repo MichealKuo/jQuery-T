@@ -15,6 +15,7 @@
         .color-selector-area{
             height: 400px;
             border: 1px solid #ccc;
+            flex-wrap: wrap;
             display: flex;
         }
         .color-selector{
@@ -48,8 +49,7 @@
             </div>
             <div class="col-6">
                 <div class="color-selector-area">
-                    <div class="color-selector btn-g"></div>
-                    <div class="color-selector btn-p"></div>
+                
                 </div>
             </div>
         </div>
@@ -62,12 +62,14 @@
         // $(".btn-p").on('click',function(){
         //     $('.color-demo').css('background','lightpink');
         // })
+        
+        //.color-selector 真正要抓的人
         $('.color-selector-area').on('click','.color-selector',function(){
             // console.log('hi',$(this).css('background-color'));
             const bgColor = $(this).css('background-color');
             $('.color-demo').css('background-color',bgColor);
         });
-        for(let i = 0; i< 3; i++){
+        for(let i = 0; i< 10; i++){
             $('.color-selector-area').append(`<div class="color-selector btn-p"></div>`);
         }
     </script>
