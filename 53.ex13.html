@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+        .img-wrap {
+            width: 300px;
+            
+        }
+        .main-wrap {
+            width: 100%;
+            object-fit: contain;
+        }
+        .big-logo img{
+            width: 50%;
+        }
+        ul{
+            list-style: none;
+        }
+        li img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="main-wrap col-12">
+                <ul class="big-logo d-flex justify-content-center">
+                    <img src="./imgs/product1.jpg" alt="">
+                </ul>
+                <ul class="session-item d-flex ">
+                    <li><img src="./imgs/product1.jpg" alt=""></li>
+                    <li><img src="./imgs/product2.jpg" alt=""></li>
+                    <li><img src="./imgs/product3.jpg" alt=""></li>
+                    <li><img src="./imgs/product4.jpg" alt=""></li>
+                    <li><img src="./imgs/product5.jpg" alt=""></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+    
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script>
+            $('.session-item img').on('click',function(){
+                 console.log('.session-item img');
+                $('.big-logo img').attr('src',`${$(this).attr('src')}`);
+            });
+        </script>
+</body>
+</html>
