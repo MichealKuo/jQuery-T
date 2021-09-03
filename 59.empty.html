@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="removeBtn">Click</button>
+    <div class="container">
+         <div class="row">
+             <h1 class="hello helloWorld">hello World</h1>
+             <h1 class="hello helloWorld1">hello World1</h1>
+             <h1 class="hello helloWorld2">hello World2</h1>
+         </div>
+    </div>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $('#removeBtn').on('click',function(){
+            // console.log('hi');
+            $('.helloWorld').empty();
+        })
+    </script>
+</body>
+</html>

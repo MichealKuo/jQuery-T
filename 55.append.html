@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #afa;
+
+        }
+    </style>
+    <title>Document</title>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li>item 1 </li>
+                <li>item 2 </li>
+                <!-- append here -->
+            </ul>
+        </div>
+        <button>create</button>
+    </div>
+</head>
+<body>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+    //type很重要    
+    // $('ul').append('<li>item 3 </li>');
+    // $('ul').append('<div class="box"></div>');
+        for(let i = 0; i <10; i++){
+            $('ul').append(`<li>item ${i+1} </li>`)
+        }
+        $('button').on('click',function(){
+            for(let i = 0; i <1; i++){
+            $('ul').append(`<li>item ${i+1} </li>`)
+        }
+        })
+
+
+
+        //沒有＄ JQuery 這個body 是原生js物件  所以只能用原聲js方式
+
+       
+
+        const body = document.querySelector('body');
+
+        const div = document.createElement('div');
+        div.classList.add('box');
+        div.innerHTML = 'box';
+
+        body.append(div);
+
+
+    </script>
+</body>
+</html>
